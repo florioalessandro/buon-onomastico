@@ -9,6 +9,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="choices.css" />
 </head>
 <body>
   <main class="app">
@@ -65,7 +66,12 @@
           <p>Ma questo piccolo regalo viene dal cuore. È solo un anticipo: appena potrò, mi sdebiterò come si deve. Nel frattempo voglio regalarti una serata tutta nostra e ricordarti quanto sei importante per me.</p>
           <p class="signature">Buon onomastico, Tartarughina mia.<br><strong>Ti amo tanto. ♥</strong></p>
         </div>
-        <button class="primary" id="acceptBtn">Accetto la cena! 💗</button>
+        <p class="invite-question">Allora, accetti il mio invito?</p>
+        <div class="invite-choices">
+          <button class="primary" id="acceptBtn">Sì, accetto! 💗</button>
+          <button class="runaway" id="declineBtn">No</button>
+        </div>
+        <p class="escape-hint" id="escapeHint">La scelta è liberissima… quasi.</p>
       </article>
     </section>
 
