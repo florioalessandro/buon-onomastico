@@ -77,6 +77,31 @@ document.querySelector('#acceptBtn').addEventListener('click', () => {
   burst(70);
 });
 
+const declineBtn = document.querySelector('#declineBtn');
+const escapeHint = document.querySelector('#escapeHint');
+let escapeCount = 0;
+const escapeLines = [
+  'Ops… il No è scappato! 😌',
+  'Le tartarughine non possono rifiutare il sushi.',
+  'Quel pulsante è davvero molto timido.',
+  'Forse volevi premere Sì? 💗'
+];
+
+function escapeNo() {
+  const maxX = Math.min(260, window.innerWidth * .48);
+  const x = (Math.random() - .5) * maxX;
+  const y = (Math.random() - .5) * 110;
+  declineBtn.style.transform = `translate(${x}px, ${y}px) rotate(${(Math.random() - .5) * 12}deg)`;
+  escapeHint.textContent = escapeLines[escapeCount++ % escapeLines.length];
+}
+
+declineBtn.addEventListener('pointerenter', escapeNo);
+declineBtn.addEventListener('touchstart', event => {
+  event.preventDefault();
+  escapeNo();
+}, { passive: false });
+declineBtn.addEventListener('click', escapeNo);
+
 document.querySelector('#replayBtn').addEventListener('click', () => {
   currentGift = 0;
   boxes.forEach((box, index) => {
