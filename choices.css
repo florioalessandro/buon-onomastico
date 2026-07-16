@@ -1,0 +1,31 @@
+.invite-question {
+  font-family: "Playfair Display", serif;
+  font-style: italic;
+  font-weight: 700;
+  margin: 4px 0 12px;
+}
+
+.invite-choices {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-height: 58px;
+  position: relative;
+}
+
+.runaway {
+  border: 0;
+  border-radius: 999px;
+  background: #e8d9cf;
+  color: #704d4a;
+  padding: 12px 22px;
+  cursor: pointer;
+  transition: transform .16s ease;
+  font-weight: 600;
+}
+
+.escape-hint {
+  font-size: .68rem;
+  opacity: .55;
+  margin: 6px 0 0;
+}
