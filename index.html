@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#f7d8cb" />
+  <title>Buon onomastico, Tartarughina mia 💗</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="app">
+    <section class="screen intro active" id="intro">
+      <div class="intro-copy">
+        <p class="eyebrow">una piccola sorpresa per te</p>
+        <h1>Buon onomastico,<br><em>Tartarughina mia</em></h1>
+        <p class="lead">Ho preparato qualche regalino…<br>ma dovrai scartarli uno alla volta.</p>
+        <button class="primary" id="startBtn">Scarta i regali <span>🎁</span></button>
+      </div>
+      <p class="tiny">Attenzione: non tutto è come sembra.</p>
+    </section>
+
+    <section class="screen gifts" id="gifts">
+      <header class="gift-header">
+        <p class="eyebrow">operazione buon onomastico</p>
+        <h2>Tre pacchetti.<br><em>Un solo vero regalo.</em></h2>
+        <p id="giftInstruction">Comincia dal primo… e non montarti troppo la testa.</p>
+      </header>
+      <div class="gift-grid">
+        <button class="gift-box ready" data-gift="phone" aria-label="Apri il primo regalo">
+          <span class="number">01</span><span class="box-icon">🎁</span><strong>Aprimi per primo</strong><small>se hai il coraggio</small>
+        </button>
+        <button class="gift-box locked" data-gift="trip" aria-label="Secondo regalo bloccato" disabled>
+          <span class="number">02</span><span class="box-icon">🎁</span><strong>Poi tocca a me</strong><small>niente sbirciatine</small>
+        </button>
+        <button class="gift-box locked" data-gift="sushi" aria-label="Terzo regalo bloccato" disabled>
+          <span class="number">03</span><span class="box-icon">🎁</span><strong>Il gran finale</strong><small>forse quello vero</small>
+        </button>
+      </div>
+    </section>
+
+    <section class="reveal" id="reveal" aria-hidden="true">
+      <div class="reveal-card">
+        <button class="close" id="closeReveal" aria-label="Chiudi">×</button>
+        <div class="reveal-visual" id="revealVisual"></div>
+        <p class="eyebrow" id="revealLabel"></p>
+        <h2 id="revealTitle"></h2>
+        <p id="revealText"></p>
+        <button class="primary" id="continueBtn">Continua</button>
+      </div>
+    </section>
+
+    <section class="screen final" id="final">
+      <div class="final-image">
+        <img src="assets/tartarughina-sushi.png" alt="Una dolce tartarughina a una cena sushi romantica" />
+      </div>
+      <article class="final-note">
+        <p class="eyebrow">questo invece è tutto vero</p>
+        <h2>Ti porto a mangiare <em>sushi.</em> 🍣</h2>
+        <p class="date-line">Una serata per noi due, piena di risate, coccole e bacchette usate malissimo.</p>
+        <div class="heartfelt">
+          <p>Avrei voluto fare molto di più per te, perché meriti davvero il mondo. So che questo è un periodo un po’ particolare e forse non riesco a dimostrartelo sempre come vorrei.</p>
+          <p>Ma questo piccolo regalo viene dal cuore. È solo un anticipo: appena potrò, mi sdebiterò come si deve. Nel frattempo voglio regalarti una serata tutta nostra e ricordarti quanto sei importante per me.</p>
+          <p class="signature">Buon onomastico, Tartarughina mia.<br><strong>Ti amo tanto. ♥</strong></p>
+        </div>
+        <button class="primary" id="acceptBtn">Accetto la cena! 💗</button>
+      </article>
+    </section>
+
+    <section class="screen success" id="success">
+      <div class="success-inner">
+        <div class="big-heart">♥</div>
+        <p class="eyebrow">appuntamento confermato</p>
+        <h2>Preparati,<br><em>Tartarughina!</em></h2>
+        <p>Al sushi e alle coccole penso io. 🍣💗</p>
+        <button class="secondary" id="replayBtn">Rivedi la sorpresa</button>
+      </div>
+    </section>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>
